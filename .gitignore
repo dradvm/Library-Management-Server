@@ -17,7 +17,7 @@ pids/
 *.pid.lock
 
 # Environment variables
-# .env
+.env
 
 # Cache
 .cache/
