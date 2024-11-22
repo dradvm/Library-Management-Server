@@ -42,7 +42,7 @@ const getSignedUrl = async (filePath) => {
 const getNewUrlSign = async (modelData, modelClass) => {
     const date = new Date()
     date.setDate(date.getDate() + 1)
-    if (date >= modelData.hinhAnhHetHan) {
+    if (modelData != null && date >= modelData.hinhAnhHetHan) {
         getSignedUrl(modelData.duongDanHinhAnh)
             .then((data) => {
                 return modelClass.findByIdAndUpdate(modelData._id, data)
